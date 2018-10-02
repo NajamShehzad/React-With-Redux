@@ -23,6 +23,7 @@ class App extends Component {
             <Switch>
               <Route path="/" component={FirstRoute} exact />
               <Route path="/second/:id" component={SecondRoute} />
+              <Route path="/second" component={SecondRoute} />
               <Route component={Error404} />
             </Switch>
           </div>
