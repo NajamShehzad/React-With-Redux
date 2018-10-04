@@ -14,7 +14,8 @@ const Header = () => (
             To get started, edit <code>src/App.js</code> and save to reload.
     </p>
         <NavLink to='/' > Go To First Page</NavLink><br />
-        <NavLink to='/second' > Go To Second Page</NavLink>
+        <NavLink to='/second' > Go To Second Page</NavLink><br />
+        <NavLink to='/addExpense' > Add a Expense</NavLink>
 
     </div>
 )

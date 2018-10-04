@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import { AdminWarning } from './playground/HigherOrderComponent';
@@ -13,14 +13,14 @@ import getVisibleExpenses from './selector/expenses';
 
 
 const store = configureStore();
-store.dispatch(addExpense({ description: "Study Redux" }));
-store.dispatch(addExpense({ description: "Chat App" }));
-store.dispatch(setTextFilter('App '))
+store.dispatch(addExpense({ description: "Study Redux", amount: 400 }));
+store.dispatch(addExpense({ description: "Chat App", createdAt: 5 }));
 
 
-setTimeout(()=>{
-    store.dispatch(setTextFilter('Change'))
-},3000);
+setTimeout(() => {
+    store.dispatch(addExpense({ description: "Server App" }));
+    store.dispatch(addExpense({ description: "car", amount: 5400, createdAt: 2 }));
+}, 3000);
 
 console.log(store.getState());
 
@@ -30,7 +30,7 @@ console.log(visibleExpenses);
 
 const JSX = (
     <Provider store={store} >
-        <App/>
+        <App />
     </Provider>
 )
 
