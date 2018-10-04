@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import FirstRoute from './components/firstRoute';
 import SecondRoute from './components/secondRoute';
 import AddExpense from './components/CreateExpense';
+import EditExpense from './components/edit';
 
 const Error404 = () => (
   <div>
@@ -26,6 +27,8 @@ class App extends Component {
               <Route path="/second/:id" component={SecondRoute} />
               <Route path="/second" component={SecondRoute} />
               <Route path="/addExpense" component={AddExpense} />
+              <Route path="/edit/:id" component={EditExpense} />
+              <Route path="/edit" component={EditExpense} />
               <Route component={Error404} />
             </Switch>
           </div>

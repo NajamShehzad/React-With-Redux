@@ -16,6 +16,8 @@ const Header = () => (
         <NavLink to='/' > Go To First Page</NavLink><br />
         <NavLink to='/second' > Go To Second Page</NavLink><br />
         <NavLink to='/addExpense' > Add a Expense</NavLink>
+        <NavLink to='/edit' >Edit Expense</NavLink>
+
 
     </div>
 )

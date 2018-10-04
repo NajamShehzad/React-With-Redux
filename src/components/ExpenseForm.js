@@ -10,13 +10,19 @@ console.log(now.format('MMM Do YYYY'));
 
 
 class ExpenseFrom extends Component {
-    state = {
-        description: '',
-        note: '',
-        amount: '',
-        createdAt: moment(),
-        calanderFocused: false
-    };
+
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            description: props.expense ? props.expense.description : '',
+            note: props.expense ? props.expense.note : '',
+            amount: props.expense ? props.expense.amount : '',
+            createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+            calanderFocused: false
+        };
+    }
+
     upDateAmount(amount) {
         if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
             this.setState({ amount })
